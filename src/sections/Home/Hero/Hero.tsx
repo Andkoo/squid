@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SVG from "react-inlinesvg";
 import { v4 as uuidv4 } from "uuid";
 
@@ -41,6 +41,14 @@ const USER_POST_SWITCH_TIMEOUT = 5 * 1000;
 type TUserPost = typeof USER_POSTS[number];
 
 const Hero = () => {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+  });
+  const textsScale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+  const textsOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   const [userPosts, setUserPosts] = useState<TUserPost[]>(USER_POSTS);
 
   useEffect(() => {
@@ -65,10 +73,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center stripes-bg pt-44 ">
+    <div ref={heroRef} className="flex flex-col items-center stripes-bg pt-44 ">
       {/* Texts */}
       <Container>
-        <div className="flex flex-col items-center pb-16">
+        <motion.div
+          style={{
+            scale: textsScale,
+            opacity: textsOpacity,
+          }}
+          className="flex flex-col items-center pb-16 origin-bottom will-change-transform"
+        >
           <h1 className="relative max-w-[752px] pb-[18px] text-center text-[64px] font-semibold leading-[80px] text-white after:absolute after:top-1/2 after:left-1/2 after:-z-10 after:aspect-square after:w-[70%] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-heroBackground">
             Beautiful Landing Page Design for You
           </h1>
@@ -77,7 +91,7 @@ const Hero = () => {
             functional. It should be able to solve the problem
           </h2>
           <Button>Download Template</Button>
-        </div>
+        </motion.div>
       </Container>
       {/* End of Texts */}
 
