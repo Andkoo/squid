@@ -11,3 +11,9 @@
     @apply font-semibold;
   }
 }
+
+@layer components {
+  .svg path {
+    fill: currentColor;
+  }
+}

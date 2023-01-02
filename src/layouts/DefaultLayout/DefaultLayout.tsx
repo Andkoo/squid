@@ -11,7 +11,7 @@ type TDefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: TDefaultLayoutProps) => (
   <div className="flex flex-col min-h-screen">
-    <header>
+    <header className="fixed top-0 left-0 right-0">
       <Container className="flex items-center justify-between py-7">
         <Image
           priority

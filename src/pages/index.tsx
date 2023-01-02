@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { Hero } from "~/sections/Home";
+
 const Home = () => {
   return (
     <>
@@ -29,7 +31,7 @@ const Home = () => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <div>Home Page</div>
+      <Hero />
     </>
   );
 };
