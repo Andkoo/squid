@@ -10,6 +10,8 @@ module.exports = {
       },
       backgroundImage: {
         primary: "linear-gradient(92.51deg, #FF9898 0.48%, #8054FF 100%)",
+        heroBackground:
+          "radial-gradient(50% 50% at 50% 50%, #222228 0%, transparent 100%)",
         mockupChartBar:
           "linear-gradient(154.63deg, #FF9898 3.69%, #8054FF 67.86%)",
       },

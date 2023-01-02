@@ -16,4 +16,20 @@
   .svg path {
     fill: currentColor;
   }
+
+  .stripes-bg {
+    background: linear-gradient(
+          to top,
+          #000 20%,
+          transparent 95%,
+          hsla(0, 0%, 0%, 0.3)
+        )
+        center / cover no-repeat,
+      linear-gradient(
+          to right,
+          transparent calc(100vw / 14 - 2px),
+          #404047 calc(100vw / 14 - 1px)
+        )
+        top left / calc(100vw / 14 - 1px) 1px repeat;
+  }
 }
