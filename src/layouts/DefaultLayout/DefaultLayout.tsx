@@ -155,7 +155,7 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
         {/* End of Second row */}
       </footer>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-end gap-x-2 p-4">
+      <div className="fixed bottom-0 right-0 z-50 flex justify-end gap-x-2 p-4">
         <SocialIcon
           url="https://github.com/Andkoo/squid"
           target="_blank"
