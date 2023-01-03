@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import SVG from "react-inlinesvg";
 import { v4 as uuidv4 } from "uuid";
 
@@ -58,7 +58,8 @@ const Hero = () => {
     interval = setInterval(() => {
       setUserPosts((prev) => {
         const newPosts = [...prev];
-        const lastPost = newPosts.pop() || (USER_POSTS[0] as TUserPost);
+        const lastPost =
+          newPosts.pop() || (USER_POSTS[USER_POSTS.length - 1] as TUserPost);
 
         // Change UUID to make the post "unique" so it
         // will trigger enter animation
