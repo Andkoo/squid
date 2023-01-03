@@ -58,7 +58,7 @@ const SpinningCircle = () => {
           cy="158"
           r="16"
           fill="url(#paint0_radial_0_1)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <circle cx="398" cy="158" r="9.05882" fill="url(#paint1_radial_0_1)" />
         <circle
@@ -66,7 +66,7 @@ const SpinningCircle = () => {
           cy="489"
           r="16"
           fill="url(#paint2_radial_0_1)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <circle cx="453" cy="489" r="9.05882" fill="url(#paint3_radial_0_1)" />
         <circle
@@ -74,7 +74,7 @@ const SpinningCircle = () => {
           cy="388"
           r="16"
           fill="url(#paint4_radial_0_1)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <circle cx="157" cy="388" r="9.05882" fill="url(#paint5_radial_0_1)" />
         <defs>
@@ -110,8 +110,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(392.182 139.818) rotate(68.4287) scale(33.628 396.153)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <radialGradient
             id="paint1_radial_0_1"
@@ -121,8 +121,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(394.706 147.706) rotate(68.4287) scale(19.0394 224.292)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <radialGradient
             id="paint2_radial_0_1"
@@ -132,8 +132,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(447.182 470.818) rotate(68.4287) scale(33.628 396.153)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <radialGradient
             id="paint3_radial_0_1"
@@ -143,8 +143,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(449.706 478.706) rotate(68.4287) scale(19.0394 224.292)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <radialGradient
             id="paint4_radial_0_1"
@@ -154,8 +154,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(151.182 369.818) rotate(68.4287) scale(33.628 396.153)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <radialGradient
             id="paint5_radial_0_1"
@@ -165,8 +165,8 @@ const SpinningCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(153.706 377.706) rotate(68.4287) scale(19.0394 224.292)"
           >
-            <stop stop-color="#FF9898" />
-            <stop offset="1" stop-color="#8054FF" />
+            <stop stopColor="#FF9898" />
+            <stop offset="1" stopColor="#8054FF" />
           </radialGradient>
           <motion.image
             style={{

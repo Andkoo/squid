@@ -264,7 +264,13 @@ const Hero = () => {
 
       {/* BG gradient */}
       <div>
-        <Image src="/images/hero-bg.svg" width={1920} height={600} alt="" />
+        <Image
+          src="/images/hero-bg.svg"
+          width={1920}
+          height={600}
+          alt=""
+          className="w-screen"
+        />
       </div>
       {/* End of BG gradient */}
     </div>

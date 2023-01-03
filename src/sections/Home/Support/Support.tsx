@@ -3,7 +3,7 @@ import { Button, Container } from "~/ui";
 import SpinningCircle from "./SpinningCircle";
 
 const Support = () => (
-  <Container className="flex items-center gap-x-6">
+  <Container className="flex items-center gap-x-6 pb-11">
     <div>
       <SpinningCircle />
     </div>
