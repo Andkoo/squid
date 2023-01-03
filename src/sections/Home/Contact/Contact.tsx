@@ -26,8 +26,8 @@ const Contact = () => {
 
   return (
     <Container>
-      <div className="-ml-9 flex items-start gap-x-16 pb-20">
-        <div className="relative flex-none">
+      <div className="relative flex items-start gap-x-16 pb-40 lg:-ml-9 lg:pb-20">
+        <div className="absolute right-[20px] bottom-28 -z-10 flex-none lg:relative lg:bottom-0 lg:right-0">
           <BackgroundDot
             size={64}
             className="absolute top-0 left-0 -translate-y-1/2 -translate-x-1/2"
@@ -45,10 +45,10 @@ const Contact = () => {
           />
         </div>
         <div>
-          <strong className="text-5xl leading-[80px] text-white">
+          <strong className="max-w-[504px] text-5xl leading-[80px] text-white">
             Get In Touch
           </strong>
-          <p className="pb-7 text-lg leading-7">
+          <p className="max-w-[504px] pb-7 text-lg leading-7">
             A good design is not only aesthetically pleasing, but also
             functional. It should be able to solve the problem.
           </p>

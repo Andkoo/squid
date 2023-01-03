@@ -13,14 +13,12 @@ type TDefaultLayoutProps = {
 
 const HEADER_VARIANTS = {
   transparent: {
-    paddingBlock: "1.75rem",
     background: "transparent",
     borderBottom: "1px solid transparent",
     backdropFilter: "none",
     transition: "padding 0.15s linear",
   },
   withBg: {
-    paddingBlock: "1rem",
     background: "hsla(0, 0%, 0%, 0.8)",
     borderBottom: "1px solid #313139",
     backdropFilter: "blur(8px)",
@@ -53,9 +51,13 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
   }, [headerVariant]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <header
-        className="fixed top-0 left-0 right-0 z-50 will-change-auto"
+        className={
+          headerVariant === "transparent"
+            ? "fixed top-0 left-0 right-0 z-50 py-5 will-change-auto sm:py-7"
+            : "fixed top-0 left-0 right-0 z-50 py-5 will-change-auto"
+        }
         style={HEADER_VARIANTS[headerVariant]}
       >
         <Container className="flex items-center justify-between">
@@ -65,6 +67,7 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
             width={132}
             height={34}
             alt="Squid Logo"
+            className="w-[80px] sm:w-[96px] md:w-[132px]"
           />
           <Button>Download Template</Button>
         </Container>
@@ -74,8 +77,8 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
 
       <footer>
         {/* First row */}
-        <div className="pt-12 pb-8 bg-gray-800">
-          <Container className="flex items-start justify-between">
+        <div className="bg-gray-800 pt-12 pb-8">
+          <Container className="flex flex-col items-start justify-between gap-y-12 md:flex-row">
             {/* Left column */}
             <div>
               <Image
@@ -93,7 +96,7 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
             {/* Right column */}
             <div>
               <strong className="leading-8 text-white">Sections</strong>
-              <div className="grid grid-cols-3 gap-x-[104px]">
+              <div className="grid grid-cols-1 gap-x-[104px] gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
                 {[...Array(3)].map((_, idx) => (
                   <div
                     key={`footer-section-${idx}`}
@@ -121,7 +124,7 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
         {/* End of First row */}
         {/* Second row */}
         <div>
-          <Container className="flex items-center justify-between py-7">
+          <Container className="flex flex-col items-center justify-between gap-y-6 py-7 sm:flex-row">
             <div className="text-sm leading-7 text-gray">
               All Rights Reservd Inkyy.com {YEAR}
             </div>

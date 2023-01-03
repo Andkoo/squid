@@ -8,9 +8,9 @@ type TButtonProps = {
 
 const VARIANTS: Record<TButtonVariant, string> = {
   primary:
-    "rounded-[5px] bg-primary px-7 py-3 text-white transition-shadow hover:shadow-buttonHover",
+    "rounded-[5px] bg-primary px-5 sm:px-7 py-3 text-sm text-white transition-shadow hover:shadow-buttonHover",
   secondary:
-    "rounded-[5px] bg-black px-7 py-3 text-white transition-colors hover:bg-gray-700",
+    "rounded-[5px] bg-black px-7 py-3 text-sm text-white transition-colors hover:bg-gray-700",
 };
 
 const Button = ({

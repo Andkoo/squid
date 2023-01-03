@@ -10,12 +10,12 @@ import { BackgroundDot } from "~/components";
 import ArticleSkeleton from "./ArticleSkeleton";
 
 const CHART_BARS = [
-  ["38%", "15%", "30%", "0%", "10%", "38%"],
-  ["38%", "25%", "0%", "25%", "38%"],
-  ["38%", "15%", "0%", "38%"],
-  ["38%", "30%", "10%", "25%", "0%", "30%", "38%"],
-  ["38%", "0%", "38%"],
-  ["38%", "20%", "0%", "30%", "10%", "38%", "0%", "38%"],
+  ["4.8rem", "1.5rem", "4rem", "0rem", "1rem", "4.8rem"],
+  ["4.8rem", "2rem", "0rem", "2rem", "4.8rem"],
+  ["4.8rem", "1.5rem", "0rem", "4.8rem"],
+  ["4.8rem", "4rem", "1rem", "2rem", "0rem", "4rem", "4.8rem"],
+  ["4.8rem", "0rem", "4.8rem"],
+  ["4.8rem", "1rem", "0rem", "4rem", "1rem", "4.8rem", "0rem", "4.8rem"],
 ];
 
 const USER_POSTS = [
@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="stripes-bg relative flex flex-col items-center pt-44"
+      className="stripes-bg relative flex w-screen flex-col items-center overflow-x-hidden pt-28 sm:pt-36 lg:pt-44"
     >
       {/* BG dots */}
       <BackgroundDot
@@ -100,12 +100,12 @@ const Hero = () => {
             scale: textsScale,
             opacity: textsOpacity,
           }}
-          className="flex origin-bottom flex-col items-center pb-16 will-change-transform"
+          className="flex origin-bottom flex-col items-center pb-12 will-change-transform md:pb-16"
         >
-          <h1 className="relative max-w-[752px] pb-[18px] text-center text-[64px] font-semibold leading-[80px] text-white after:absolute after:top-1/2 after:left-1/2 after:-z-10 after:aspect-square after:w-[70%] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-heroBackground">
+          <h1 className="relative pb-[18px] text-center text-3xl font-semibold leading-normal text-white after:absolute after:top-1/2 after:left-1/2 after:-z-10 after:aspect-square after:w-[70%] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-heroBackground sm:max-w-[576px] sm:text-5xl sm:leading-[64px] lg:max-w-[752px] lg:text-[64px] lg:leading-[80px]">
             Beautiful Landing Page Design for You
           </h1>
-          <h2 className="max-w-[576px] pb-9 text-center text-lg leading-7 text-gray">
+          <h2 className="max-w-[90%] pb-9 text-center text-sm leading-6 text-gray sm:max-w-[576px] sm:text-lg sm:leading-7">
             A good design is not only aesthetically pleasing, but also
             functional. It should be able to solve the problem.
           </h2>
@@ -115,8 +115,8 @@ const Hero = () => {
       {/* End of Texts */}
 
       {/* Mockup */}
-      <Container className="relative z-10 mb-[-20vw]">
-        <div className="mx-auto grid w-full max-w-[864px] grid-cols-3 gap-x-7 rounded-[28px] bg-gray-900 px-14 py-11">
+      <Container className="relative z-10 mb-[-176px] sm:mb-[-20vw]">
+        <div className="mx-auto grid w-full max-w-[864px] grid-cols-1 gap-y-6 gap-x-6 rounded-[28px] bg-gray-900 px-6 py-6 lg:grid-cols-3 lg:px-14 lg:py-11">
           {/* First column */}
           <div className="flex flex-col items-center rounded-[20px] bg-gray-700 p-6">
             <SVG src="/images/logo-compact.svg" className="svg text-gray-500" />
@@ -130,7 +130,7 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: idx * 0.2 }}
                 >
-                  <ArticleSkeleton />
+                  <ArticleSkeleton centered />
                 </motion.div>
               ))}
             </div>
@@ -210,7 +210,7 @@ const Hero = () => {
                       duration: item.length * 2,
                       delay: idx * 0.3,
                     }}
-                    className="flex h-24 flex-1 flex-col justify-end rounded-full bg-gray-500"
+                    className="flex h-24 w-5 flex-col justify-end rounded-full bg-gray-500"
                   >
                     <div className="flex-1 rounded-full bg-mockupChartBar" />
                   </motion.div>
@@ -255,7 +255,7 @@ const Hero = () => {
                 ))}
               </div>
             </div>
-            <div className="flex-1 rounded-[20px] bg-gray-700 py-6 px-5" />
+            <div className="hidden flex-1 rounded-[20px] bg-gray-700 py-6 px-5 lg:block" />
           </div>
           {/* End of Third column */}
         </div>
@@ -269,7 +269,7 @@ const Hero = () => {
           width={1920}
           height={600}
           alt=""
-          className="w-screen"
+          className="w-[max(100vw,1024px)] max-w-none"
         />
       </div>
       {/* End of BG gradient */}

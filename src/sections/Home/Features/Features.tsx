@@ -62,7 +62,7 @@ const CARD_VARIANTS = {
 };
 
 const Features = () => (
-  <Container className="pb-8">
+  <Container className="pb-24 lg:pb-8">
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -70,10 +70,11 @@ const Features = () => (
         margin: "0px 0px -300px 0px",
         once: true,
       }}
+      className="flex flex-col"
     >
       <motion.strong
         variants={TEXT_VARIANTS}
-        className="max-w-[578px] pb-1 text-5xl leading-[80px] text-white"
+        className="max-w-[80%] pb-1 text-3xl leading-normal text-white sm:max-w-[578px] sm:text-5xl sm:leading-[64px]"
       >
         Features
       </motion.strong>
@@ -82,12 +83,12 @@ const Features = () => (
         transition={{
           delay: 0.2,
         }}
-        className="max-w-[578px] pb-8 text-lg leading-7"
+        className="max-w-[80%] pb-8 text-lg leading-7 sm:max-w-[578px]"
       >
         A good design is not only aesthetically pleasing, but also functional.
         It should be able to solve the problem.
       </motion.p>
-      <div className="grid grid-cols-3 gap-[30px]">
+      <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
         {FEATURES.map((item, idx) => (
           <motion.button
             key={`home-features-item-${idx}`}
@@ -95,7 +96,7 @@ const Features = () => (
             transition={{
               delay: 0.4 + idx * 0.2,
             }}
-            className="group flex flex-col items-center rounded-[20px] bg-gray-800 px-6 py-12"
+            className="group flex flex-col items-center rounded-[20px] bg-gray-800 px-6 py-6 sm:py-12"
           >
             <div className="relative overflow-hidden rounded-[30px] bg-gray-700 p-7 before:absolute before:inset-0 before:bg-primary before:opacity-0 before:transition-opacity group-hover:before:opacity-100">
               <Image
@@ -103,13 +104,13 @@ const Features = () => (
                 width={44}
                 height={44}
                 alt=""
-                className="relative z-10"
+                className="relative z-10 h-[32px] w-[32px] sm:h-[44px] sm:w-[44px]"
               />
             </div>
-            <strong className="pt-10 pb-4 text-xl leading-8 text-center text-white">
+            <strong className="pt-6 pb-4 text-center text-xl leading-8 text-white sm:pt-10">
               {item.title}
             </strong>
-            <p className="text-sm leading-7 text-center">{item.description}</p>
+            <p className="text-center text-sm leading-7">{item.description}</p>
           </motion.button>
         ))}
       </div>

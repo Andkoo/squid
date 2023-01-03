@@ -34,15 +34,16 @@ const SpinningCircle = () => {
   });
 
   return (
-    <motion.div>
+    <div className="relative flex aspect-square w-full flex-none justify-center overflow-hidden lg:w-[678px]">
       <motion.svg
         style={{ rotate: baseRotation }}
         width="678"
-        height="678"
+        height="100%"
         viewBox="0 0 678 678"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="absolute"
       >
         <circle cx="339" cy="339" r="64.5714" fill="#18181C" />
         <circle cx="339" cy="339" r="129.719" stroke="#222228" />
@@ -197,7 +198,7 @@ const SpinningCircle = () => {
           />
         </defs>
       </motion.svg>
-    </motion.div>
+    </div>
   );
 };
 
