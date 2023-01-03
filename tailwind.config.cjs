@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        buttonHover: "0 4px 30px 3px hsla(283, 53%, 64%, 0.5)",
+        buttonHover: "0 4px 30px 3px hsla(283, 53%, 64%, 0.35)",
       },
       backgroundImage: {
         primary: "linear-gradient(92.51deg, #FF9898 0.48%, #8054FF 100%)",
