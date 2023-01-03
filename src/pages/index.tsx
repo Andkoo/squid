@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Features, Hero } from "~/sections/Home";
+import { Features, Hero, Support } from "~/sections/Home";
 
 const Home = () => {
   return (
@@ -33,6 +33,7 @@ const Home = () => {
 
       <Hero />
       <Features />
+      <Support />
     </>
   );
 };
