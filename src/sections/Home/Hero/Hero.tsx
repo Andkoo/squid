@@ -5,9 +5,9 @@ import SVG from "react-inlinesvg";
 import { v4 as uuidv4 } from "uuid";
 
 import { Button, Container } from "~/ui";
+import { BackgroundDot } from "~/components";
 
 import ArticleSkeleton from "./ArticleSkeleton";
-import BackgroundDot from "./BackgroundDot";
 
 const CHART_BARS = [
   ["38%", "15%", "30%", "0%", "10%", "38%"],
@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="relative flex flex-col items-center stripes-bg pt-44"
+      className="stripes-bg relative flex flex-col items-center pt-44"
     >
       {/* BG dots */}
       <BackgroundDot
@@ -100,7 +100,7 @@ const Hero = () => {
             scale: textsScale,
             opacity: textsOpacity,
           }}
-          className="flex flex-col items-center pb-16 origin-bottom will-change-transform"
+          className="flex origin-bottom flex-col items-center pb-16 will-change-transform"
         >
           <h1 className="relative max-w-[752px] pb-[18px] text-center text-[64px] font-semibold leading-[80px] text-white after:absolute after:top-1/2 after:left-1/2 after:-z-10 after:aspect-square after:w-[70%] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-heroBackground">
             Beautiful Landing Page Design for You
@@ -119,7 +119,7 @@ const Hero = () => {
         <div className="mx-auto grid w-full max-w-[864px] grid-cols-3 gap-x-7 rounded-[28px] bg-gray-900 px-14 py-11">
           {/* First column */}
           <div className="flex flex-col items-center rounded-[20px] bg-gray-700 p-6">
-            <SVG src="/images/logo-compact.svg" className="text-gray-500 svg" />
+            <SVG src="/images/logo-compact.svg" className="svg text-gray-500" />
             <div className="mt-5 mb-8 h-[1px] w-full bg-gray-500" />
             {/* Articles */}
             <div className="flex flex-col gap-y-6 pb-11">
@@ -143,7 +143,7 @@ const Hero = () => {
               className="flex flex-col items-center pb-1"
             >
               <Image src="/images/user-1.png" width={42} height={42} alt="" />
-              <div className="flex flex-wrap justify-center flex-1 pt-5 gap-x-2 gap-y-1">
+              <div className="flex flex-1 flex-wrap justify-center gap-x-2 gap-y-1 pt-5">
                 <div className="h-[6px] w-[56px] flex-shrink-0 rounded-full bg-gray-500" />
                 <div className="h-[6px] w-[42px] flex-shrink-0 rounded-full bg-gray-500" />
                 <div className="w-full" />
@@ -159,7 +159,7 @@ const Hero = () => {
             {/* First box */}
             <div className="flex-1 rounded-[20px] bg-gray-700 py-6 px-5">
               <ArticleSkeleton reverse />
-              <div className="flex justify-center py-6 rotate-90">
+              <div className="flex rotate-90 justify-center py-6">
                 <motion.svg viewBox="0 0 100 100" className="h-28 w-28">
                   <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0.48%" stopColor="#FF9898" />
@@ -210,7 +210,7 @@ const Hero = () => {
                       duration: item.length * 2,
                       delay: idx * 0.3,
                     }}
-                    className="flex flex-col justify-end flex-1 h-24 bg-gray-500 rounded-full"
+                    className="flex h-24 flex-1 flex-col justify-end rounded-full bg-gray-500"
                   >
                     <div className="flex-1 rounded-full bg-mockupChartBar" />
                   </motion.div>

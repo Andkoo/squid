@@ -2,6 +2,7 @@ type TButtonVariant = "primary" | "secondary";
 
 type TButtonProps = {
   variant?: TButtonVariant;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -12,8 +13,16 @@ const VARIANTS: Record<TButtonVariant, string> = {
     "rounded-[5px] bg-black px-7 py-3 text-white transition-colors hover:bg-gray-700",
 };
 
-const Button = ({ variant = "primary", children, ...props }: TButtonProps) => (
-  <button {...props} className={VARIANTS[variant]}>
+const Button = ({
+  variant = "primary",
+  children,
+  className,
+  ...props
+}: TButtonProps) => (
+  <button
+    {...props}
+    className={`${VARIANTS[variant]}${className ? ` ${className}` : ""}`}
+  >
     {children}
   </button>
 );

@@ -4,11 +4,25 @@
 
 @layer base {
   body {
-    @apply font-sans bg-black text-gray;
+    @apply bg-black font-sans text-gray;
   }
 
   strong {
     @apply font-semibold;
+  }
+
+  input,
+  textarea {
+    @apply rounded-[5px] bg-gray-800 py-3 px-7 text-sm leading-5 text-white;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-gray-100;
+  }
+
+  textarea {
+    resize: none;
   }
 }
 

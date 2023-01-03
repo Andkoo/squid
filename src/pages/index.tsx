@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Features, Hero, Partners, Support } from "~/sections/Home";
+import { Contact, Features, Hero, Partners, Support } from "~/sections/Home";
 
 const Home = () => {
   return (
@@ -35,6 +35,7 @@ const Home = () => {
       <Features />
       <Support />
       <Partners />
+      <Contact />
     </>
   );
 };

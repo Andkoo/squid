@@ -88,7 +88,7 @@ const Partners = () => (
               <Link href={item.website} className="flex-1">
                 <SVG
                   src={item.logo}
-                  className="object-contain text-gray-300 transition-colors svg hover:text-gray-100"
+                  className="svg object-contain text-gray-300 transition-colors hover:text-gray-100"
                 />
               </Link>
             </motion.div>
@@ -115,7 +115,7 @@ const Partners = () => (
             width={554}
             height={369}
             alt=""
-            className="absolute right-0 -translate-y-1/2 top-1/2"
+            className="absolute right-0 top-1/2 -translate-y-1/2"
           />
         </motion.div>
       </Container>
