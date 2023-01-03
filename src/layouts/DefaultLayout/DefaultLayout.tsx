@@ -63,7 +63,6 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
       >
         <Container className="flex items-center justify-between">
           <Image
-            priority
             src="/images/logo.svg"
             width={132}
             height={34}
