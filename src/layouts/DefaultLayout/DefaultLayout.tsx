@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useScroll } from "framer-motion";
+import { SocialIcon } from "react-social-icons";
 
 import { Button, Container } from "~/ui";
 
@@ -153,6 +154,23 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
         </div>
         {/* End of Second row */}
       </footer>
+
+      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-end gap-x-2 p-4">
+        <SocialIcon
+          url="https://github.com/Andkoo/squid"
+          target="_blank"
+          bgColor="hsl(0, 0%, 80%)"
+          fgColor="hsl(0, 0%, 40%)"
+          className="!h-8 !w-8 opacity-50 transition-opacity hover:opacity-100"
+        />
+        <SocialIcon
+          url="mailto:andrejmikulicka95@gmail.com"
+          target="_blank"
+          bgColor="hsl(0, 0%, 80%)"
+          fgColor="hsl(0, 0%, 40%)"
+          className="!h-8 !w-8 opacity-50 transition-opacity hover:opacity-100"
+        />
+      </div>
     </div>
   );
 };
