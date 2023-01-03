@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Button, Container } from "~/ui";
 
 import ArticleSkeleton from "./ArticleSkeleton";
+import BackgroundDot from "./BackgroundDot";
 
 const CHART_BARS = [
   ["38%", "15%", "30%", "0%", "10%", "38%"],
@@ -73,7 +74,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="flex flex-col items-center stripes-bg pt-44 ">
+    <div
+      ref={heroRef}
+      className="relative flex flex-col items-center stripes-bg pt-44"
+    >
+      {/* BG dots */}
+      <BackgroundDot
+        size={140}
+        className="absolute left-[7vw] top-[50vh] -translate-y-full"
+      />
+      <BackgroundDot
+        size={64}
+        className="absolute left-1/2 top-[70px] -translate-x-full"
+      />
+      <BackgroundDot
+        size={96}
+        className="absolute right-[7vw] top-[calc(50vh-150px)] -translate-y-full"
+      />
+      {/* End of BG dots */}
+
       {/* Texts */}
       <Container>
         <motion.div
@@ -88,7 +107,7 @@ const Hero = () => {
           </h1>
           <h2 className="max-w-[576px] pb-9 text-center text-lg leading-7 text-gray">
             A good design is not only aesthetically pleasing, but also
-            functional. It should be able to solve the problem
+            functional. It should be able to solve the problem.
           </h2>
           <Button>Download Template</Button>
         </motion.div>
@@ -97,7 +116,7 @@ const Hero = () => {
 
       {/* Mockup */}
       <Container className="relative z-10 mb-[-20vw]">
-        <div className="grid w-full max-w-[864px] grid-cols-3 gap-x-7 rounded-[28px] bg-gray-900 px-14 py-11">
+        <div className="mx-auto grid w-full max-w-[864px] grid-cols-3 gap-x-7 rounded-[28px] bg-gray-900 px-14 py-11">
           {/* First column */}
           <div className="flex flex-col items-center rounded-[20px] bg-gray-700 p-6">
             <SVG src="/images/logo-compact.svg" className="text-gray-500 svg" />

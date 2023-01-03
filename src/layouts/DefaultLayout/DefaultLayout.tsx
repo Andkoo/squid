@@ -86,7 +86,7 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => {
               />
               <p className="max-w-[300px] pt-6 text-sm text-gray">
                 A good design is not only aesthetically pleasing, but also
-                functional. It should be able to solve the problem
+                functional. It should be able to solve the problem.
               </p>
             </div>
             {/* End of Left column */}
