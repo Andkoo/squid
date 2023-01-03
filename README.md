@@ -1,3 +1,11 @@
+# Squid
+
+Freebie design found on Figma Community: [Figma link](<https://www.figma.com/file/XMhihcF3NMJDsqVBXZmmLg/SaaS---Free-Web-Template---By-inkyy.com-(Community)?node-id=0%3A1&t=oc123jSDksPQYYhZ-0>)
+
+Design created by [Inkyy](https://inkyy.com)
+
+Created with [create-t3-app](https://create.t3.gg/)
+
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
