@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import SVG from "react-inlinesvg";
 
 import { Button, Container } from "~/ui";
 
@@ -85,11 +86,9 @@ const Partners = () => (
               className="relative flex h-[92px] flex-col rounded-[10px] bg-black"
             >
               <Link href={item.website} className="flex-1">
-                <Image
-                  fill
+                <SVG
                   src={item.logo}
-                  alt=""
-                  style={{ objectFit: "contain" }}
+                  className="object-contain text-gray-300 transition-colors svg hover:text-gray-100"
                 />
               </Link>
             </motion.div>
